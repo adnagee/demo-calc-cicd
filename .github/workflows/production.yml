@@ -1,0 +1,44 @@
+name: Node.js CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to staging
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_APP_NAME: "learn-cicd-romello"
+        run: |
+          heroku login --email=<romello@hotmail.com> --password=$HEROKU_API_KEY
+          git push https://git.heroku.com/learn-cicd-romello.git
+          HEAD:main
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main' # Only deploy to production from the main branch
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_APP_NAME: "learn-cicd-romello-prod"
+        run: |
+          heroku login --email=<romello@hotmail.com> --password=$HEROKU_API_KEY
+          git push https://git.heroku.com/learn-cicd-romello-prod.git
+          HEAD:main

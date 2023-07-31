@@ -4,7 +4,7 @@ const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
 
 (async function testCalculatorAdd() {
-  const driver = await new Builder().forBrowser("chrome").build();
+  const driver = await new Builder().forBrowser("edge").build();
   try {
     await driver.get("http://localhost:3000"); // Replace with the actual URL of your React app
 
