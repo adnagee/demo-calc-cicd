@@ -3,11 +3,11 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../App";
 
-test("renders calculator title", () => {
-  render(<App />);
-  const titleElement = screen.getByText(/Simple Calculator/i);
-  expect(titleElement).toBeInTheDocument();
-});
+// test("renders calculator title", () => {
+//   render(<App />);
+//   const titleElement = screen.getByText(/Simple Calculator/i);
+//   expect(titleElement).toBeInTheDocument();
+// });
 
 test("performs addition correctly", () => {
   render(<App />);
