@@ -43,14 +43,14 @@ function App() {
     <div className="App">
       <h1>Simple Calculator Test</h1>
       <div>
-        <label htmlFor="Number 1">Number 1:</label>
+        <label htmlFor="Number 1">Number 1</label>
         <input
           type="text"
           id="Number 1"
           value={num1}
           onChange={(e) => setNum1(e.target.value)}
         />
-        <label htmlFor="operatorSelect">Operator:</label>
+        <label htmlFor="operatorSelect">Operator</label>
         <select
           id="operatorSelect"
           value={operator}
@@ -59,7 +59,7 @@ function App() {
           <option value="+">+</option>
           <option value="-">-</option>
         </select>
-        <label htmlFor="Number 2">Number 2:</label>
+        <label htmlFor="Number 2">Number 2</label>
         <input
           type="text"
           id="Number 2"
