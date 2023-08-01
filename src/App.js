@@ -43,12 +43,29 @@ function App() {
     <div className="App">
       <h1>Simple Calculator Test</h1>
       <div>
-        <input type="text" value={num1} onChange={handleNum1Change} />
-        <select value={operator} onChange={handleOperatorChange}>
+        <label htmlFor="num1Input">Number 1:</label>
+        <input
+          type="text"
+          id="num1Input"
+          value={num1}
+          onChange={(e) => setNum1(e.target.value)}
+        />
+        <label htmlFor="operatorSelect">Operator:</label>
+        <select
+          id="operatorSelect"
+          value={operator}
+          onChange={(e) => setOperator(e.target.value)}
+        >
           <option value="+">+</option>
           <option value="-">-</option>
         </select>
-        <input type="text" value={num2} onChange={handleNum2Change} />
+        <label htmlFor="num2Input">Number 2:</label>
+        <input
+          type="text"
+          id="num2Input"
+          value={num2}
+          onChange={(e) => setNum2(e.target.value)}
+        />
         <button onClick={handleCalculate}>Calculate</button>
       </div>
       <h2>Result: {result}</h2>
