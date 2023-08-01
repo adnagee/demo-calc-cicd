@@ -6,7 +6,7 @@ const assert = require("assert");
 (async function testCalculatorAdd() {
   const driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("https://git.heroku.com/learn-cicd-anthony.git"); // Replace with the actual URL of your React app
+    await driver.get("https://git.heroku.com/learn-cicd-anthony-prod.git"); // Replace with the actual URL of your React app
 
     await driver
       .findElement(By.css('input[placeholder="Number 1"]'))
