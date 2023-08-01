@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Simple Calculator</h1>
+      <h1>Simple Calculator Test</h1>
       <div>
         <input type="text" value={num1} onChange={handleNum1Change} />
         <select value={operator} onChange={handleOperatorChange}>
