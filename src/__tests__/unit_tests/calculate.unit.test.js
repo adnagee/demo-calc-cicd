@@ -14,6 +14,6 @@ test('returns "Error" for invalid operator', () => {
   expect(calculate(5, "*", 2)).toBe("Error");
 });
 
-test('returns "Error" for invalid operands', () => {
+it('returns "Error" for invalid operands', () => {
   expect(calculate(2, "+", 2)).toBe(4);
 });
