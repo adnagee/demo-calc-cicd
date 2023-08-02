@@ -68,7 +68,7 @@ function App() {
         />
         <button onClick={handleCalculate}>Calculate</button>
       </div>
-      <h2>Result: {result}</h2>
+      <h2 data-testid="result" >Result: {result}</h2>
     </div>
   );
 }
