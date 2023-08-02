@@ -7,17 +7,17 @@ function App() {
   const [operator, setOperator] = useState("+");
   const [result, setResult] = useState("");
 
-  // const handleNum1Change = (e) => {
-  //   setNum1(e.target.value);
-  // };
+  const handleNum1Change = (e) => {
+    setNum1(e.target.value);
+  };
 
-  // const handleNum2Change = (e) => {
-  //   setNum2(e.target.value);
-  // };
+  const handleNum2Change = (e) => {
+    setNum2(e.target.value);
+  };
 
-  // const handleOperatorChange = (e) => {
-  //   setOperator(e.target.value);
-  // };
+  const handleOperatorChange = (e) => {
+    setOperator(e.target.value);
+  };
 
   const handleCalculate = () => {
     const n1 = parseFloat(num1);
