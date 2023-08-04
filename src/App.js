@@ -48,13 +48,13 @@ function App() {
           type="text"
           id="Number 1"
           value={num1}
-          onChange={(e) => setNum1(e.target.value)}
+          onChange={handleNum1Change}
         />
         <label htmlFor="operatorSelect">Operator</label>
         <select
           id="operatorSelect"
           value={operator}
-          onChange={(e) => setOperator(e.target.value)}
+          onChange={handleOperatorChange}
         >
           <option value="+">+</option>
           <option value="-">-</option>
@@ -64,7 +64,7 @@ function App() {
           type="text"
           id="Number 2"
           value={num2}
-          onChange={(e) => setNum2(e.target.value)}
+          onChange={handleNum2Change}
         />
         <button onClick={handleCalculate}>Calculate</button>
       </div>

@@ -9,7 +9,7 @@ test("renders calculator title", () => {
   expect(titleElement).toBeInTheDocument();
 });
 
-it("performs addition correctly", () => {
+test("performs addition correctly", () => {
   render(<App />);
   const num1Input = screen.getByLabelText("Number 1");
   const operatorSelect = screen.getByLabelText("Operator");

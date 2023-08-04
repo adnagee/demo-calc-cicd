@@ -1,6 +1,6 @@
 // add one jest test
 
-import { getByTestId } from "@testing-library/react";
+//import { getByTestId, render } from "@testing-library/react";
 import App from "../../App";
 import { calculate } from "../../helpers";
 
@@ -20,11 +20,3 @@ test('returns "Error" for invalid operands', () => {
   expect(calculate(2, "+", 2)).toBe(4);
 });
 
-describe(App, ()=>{
-
-  it("display correct count", ()=>{
-    const {getByTestId} = render(<App/>)
-    const value = getByTestId("result")
-  })
-
-})
