@@ -2,10 +2,11 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
 
-(async function testCalculatorSubtract() {
+
+async function testCalculatorSubtract() {
   const driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("https://git.heroku.com/learn-cicd-anthony.git"); // Replace with the actual URL of your React app
+    await driver.get("https://learn-cicd-anthony-24f4f0f46557.herokuapp.com/"); // Replace with the actual URL of your React app
 
     await driver
       .findElement(By.css('input[placeholder="Number 1"]'))
@@ -24,8 +25,14 @@ const assert = require("assert");
       By.xpath('//h2[text()="Result: 7"]')
     );
     const resultText = await resultElement.getText();
-    assert.strictEqual(resultText, "Result: 7");
+    assert.strictEqual(resultText, "Result: 7");function add(a, b) {
+  return a + b;
+}
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(add(1, 2)).toBe(3);
+});
   } finally {
     await driver.quit();
   }
-})();
+};

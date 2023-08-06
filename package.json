@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "jesttest": "jest",
+    "jest": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +41,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jsdom-global": "^3.0.4",
+    "jsdom": "^22.1.0",
+    "jsdom-global": "^3.0.2",
+    "text-encoding-utf-8": "^1.0.2"
   }
 }

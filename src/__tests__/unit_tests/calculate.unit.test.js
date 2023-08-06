@@ -1,7 +1,6 @@
 // add one jest test
 
-//import { getByTestId, render } from "@testing-library/react";
-import App from "../../App";
+
 import { calculate } from "../../helpers";
 
 test("adds two numbers correctly", () => {

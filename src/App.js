@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
-
+//import "./App.css"
 function App() {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");

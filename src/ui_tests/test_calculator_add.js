@@ -1,12 +1,10 @@
-// add one selenium test
-
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
 
 (async function testCalculatorAdd() {
   const driver = await new Builder().forBrowser("chrome").build();
   try {
-    await driver.get("https://git.heroku.com/learn-cicd-anthony-prod.git"); // Replace with the actual URL of your React app
+    await driver.get("https://learn-cicd-anthony-24f4f0f46557.herokuapp.com/"); // Replace with the actual URL of your React app
 
     await driver
       .findElement(By.css('input[placeholder="Number 1"]'))
