@@ -4,11 +4,10 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "assert": "^2.0.0",
     "chrome": "^0.1.0",
-    "chromedriver": "^115.0.0",
     "driver": "^1.0.0",
     "jest": "^27.5.1",
     "react": "^18.2.0",
@@ -43,7 +42,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
     "@types/jsdom-global": "^3.0.4",
+    "chromedriver": "^115.0.0",
     "jsdom": "^22.1.0",
     "jsdom-global": "^3.0.2",
     "text-encoding-utf-8": "^1.0.2"
