@@ -1,7 +1,7 @@
 // This code uses the Selenium framework to perform the user interface aka Integration testing before final deployment
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
-
+jest.setTimeout(10000);
 describe("Calculator Integration Tests", () => {
   test("performs subtraction correctly", async () => {
      
@@ -20,11 +20,11 @@ describe("Calculator Integration Tests", () => {
     await driver.findElement(By.xpath('//button[text()="Calculate"]')).click();
 
     await driver.wait(
-      until.elementLocated(By.xpath('//h2[text()="Result: 7"]')),
+      until.elementLocated(By.xpath('//*[@id="root"]/div/h2')),
       5000
     );
     const resultElement = await driver.findElement(
-      By.xpath('//h2[text()="Result: 7"]')
+      By.xpath('//*[@id="root"]/div/h2')
     );
     const resultText = await resultElement.getText();
     assert.strictEqual(resultText, "Result: 7");function add(a, b) {

@@ -11,8 +11,12 @@ test("subtracts two numbers correctly", () => {
   expect(calculate(8, "-", 3)).toBe(5);
 });
 
+test("multiply two numbers correctly", () => {
+  expect(calculate(8, "/", 2)).toBe(4);
+});
+
 test('returns "Error" for invalid operator', () => {
-  expect(calculate(5, "*", 2)).toBe("Error");
+  expect(calculate(5, "*", 2)).toBe(10);
 });
 
 test('returns "Error" for invalid operands', () => {

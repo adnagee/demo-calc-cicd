@@ -65,7 +65,7 @@ function App() {
           value={num2}
           onChange={handleNum2Change}
         />
-        <button onClick={handleCalculate}>Calculate</button>
+        <button id="button" onClick={handleCalculate}>Calculate</button>
       </div>
       <h2 data-testid="result" >Result: {result}</h2>
     </div>

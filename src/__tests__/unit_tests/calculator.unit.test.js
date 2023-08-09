@@ -2,7 +2,6 @@
 //import 'jsdom-global/register'; // Import jsdom-global at the beginning of the test file
 import 'text-encoding-utf-8'; //
 import React from "react";
-//import { render, screen, expect, fireEvent } from "@testing-library/react";
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from "../../App";
@@ -10,11 +9,11 @@ import App from "../../App";
 //aimport 'jsdom-global/register';
 
 
-// test("renders calculator title", () => {
-//   render(<App />);
-//   const titleElement = screen.getByText(/Simple Calculator/i);
-//   expect(titleElement).toBeInTheDocument();
-// });
+test("renders calculator title", () => {
+  render(<App />);
+  const titleElement = screen.getByText(/Simple Calculator/i);
+  expect(titleElement).toBeInTheDocument();
+});
 
 test("performs addition correctly", () => {
   render(<App />);

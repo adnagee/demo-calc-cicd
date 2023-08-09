@@ -13,7 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "selenium-webdriver": "^4.11.1",
+    "selenium-webdriver": "^4.0.0-alpha.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,7 +44,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@types/jsdom-global": "^3.0.4",
-    "chromedriver": "^115.0.0",
+    "chromedriver": "^115.0.1",
     "jsdom": "^22.1.0",
     "jsdom-global": "^3.0.2",
     "text-encoding-utf-8": "^1.0.2"
