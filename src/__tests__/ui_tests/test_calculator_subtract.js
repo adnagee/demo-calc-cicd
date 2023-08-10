@@ -1,7 +1,9 @@
 // This code uses the Selenium framework to perform the user interface aka Integration testing before final deployment
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
+
 jest.setTimeout(10000);
+
 describe("Calculator Integration Tests", () => {
   test("performs subtraction correctly", async () => {
      
