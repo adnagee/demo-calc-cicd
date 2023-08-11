@@ -7,7 +7,7 @@ test("adds two numbers correctly", () => {
   expect(calculate(3, "+", 5)).toBe(8);
 });
 
-test("subtracts two numbers correctly", () => {
+test("subtracts two numbers correctly tonite", () => {
   expect(calculate(8, "-", 3)).toBe(5);
 });
 
