@@ -3,19 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "assert": "^2.0.0",
+    "chrome": "^0.1.0",
+    "driver": "^1.0.0",
+    "jest": "^27.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "selenium-webdriver": "^4.10.0",
+    "selenium-webdriver": "^4.0.0-alpha.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "jest": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +40,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@types/jsdom-global": "^3.0.4",
+    "chromedriver": "^115.0.1",
+    "jsdom": "^22.1.0",
+    "jsdom-global": "^3.0.2",
+    "text-encoding-utf-8": "^1.0.2"
   }
 }

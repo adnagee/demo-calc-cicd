@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
-
+//import "./App.css"
 function App() {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
@@ -41,17 +40,34 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Simple Calculator</h1>
+      <h1>Simple Calculator Test</h1>
       <div>
-        <input type="text" value={num1} onChange={handleNum1Change} />
-        <select value={operator} onChange={handleOperatorChange}>
+        <label htmlFor="Number 1">Number 1</label>
+        <input
+          type="text"
+          id="Number 1"
+          value={num1}
+          onChange={handleNum1Change}
+        />
+        <label htmlFor="operatorSelect">Operator</label>
+        <select
+          id="operatorSelect"
+          value={operator}
+          onChange={handleOperatorChange}
+        >
           <option value="+">+</option>
           <option value="-">-</option>
         </select>
-        <input type="text" value={num2} onChange={handleNum2Change} />
-        <button onClick={handleCalculate}>Calculate</button>
+        <label htmlFor="Number 2">Number 2</label>
+        <input
+          type="text"
+          id="Number 2"
+          value={num2}
+          onChange={handleNum2Change}
+        />
+        <button id="button" onClick={handleCalculate}>Calculate</button>
       </div>
-      <h2>Result: {result}</h2>
+      <h2 data-testid="result" >Result: {result}</h2>
     </div>
   );
 }
