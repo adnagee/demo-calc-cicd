@@ -22,38 +22,53 @@ function App() {
   const handleCalculate = () => {
     const n1 = parseFloat(num1);
     const n2 = parseFloat(num2);
-
-    if (!isNaN(n1) && !isNaN(n2)) {
-      switch (operator) {
-        case "+":
-          setResult((n1 + n2).toString());
-          break;
-        case "-":
-          setResult((n1 - n2).toString());
-          break;
-        default:
-          setResult("Error");
-      }
-    } else {
-      setResult("Error");
-    }
+    setResult(calculate(n1, operator, n2));
   };
 
   return (
     <div className="App">
-      <h1>Simple Calculator</h1>
+      <h1>Simple Calculator Test</h1>
       <div>
-        <input type="text" value={num1} onChange={handleNum1Change} />
-        <select value={operator} onChange={handleOperatorChange}>
+        <label htmlFor="Number 1">Number 1</label>
+        <input
+          type="text"
+          id="Number 1"
+          value={num1}
+          onChange={handleNum1Change}
+        />
+        <label htmlFor="Operator">Operator</label>
+        <select id="Operator" value={operator} onChange={handleOperatorChange}>
           <option value="+">+</option>
           <option value="-">-</option>
         </select>
-        <input type="text" value={num2} onChange={handleNum2Change} />
+        <label htmlFor="Number 2">Number 2</label>
+        <input
+          type="text"
+          id="Number 2"
+          value={num2}
+          onChange={handleNum2Change}
+        />
         <button onClick={handleCalculate}>Calculate</button>
       </div>
-      <h2>Result: {result}</h2>
+      <h2 data-testid="result">Result: {result}</h2>
     </div>
   );
 }
 
 export default App;
+export function calculate(n1, oper, n2) {
+  if (!isNaN(n1) && !isNaN(n2)) {
+    switch (oper) {
+      case "+":
+        return n1 + n2;
+
+      case "-":
+        return n1 - n2;
+
+      default:
+        return "Error";
+    }
+  } else {
+    return "Error";
+  }
+}
